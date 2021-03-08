@@ -3,12 +3,13 @@ import './App.css';
 import Table from './components/Table'
 import CreateModel from './components/CreateModal'
 import EditModal from './components/EditModal'
+import {GraphQLClient } from "graphql-request";
 
 
+const endpoint = "https://test-task.expane.pro/api/graphql";
+export const expaneClient = new GraphQLClient(endpoint, { headers: {} })
 
 function App() {
-  
-  
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [phone, setPhone] = useState("");
@@ -18,10 +19,12 @@ function App() {
   const [openCreateModal, setOpenCreateModal] = useState(false);
 
   return (
-    <div>
-      <button onClick={() => openCreateModal ?  setOpenCreateModal(false) : setOpenCreateModal(true)} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">CreateClient</button>
-      <CreateModel setOpenCreateModal={setOpenCreateModal} setFirstName={setFirstName} setLastName={setLastName} setPhone={setPhone} setAvatarUrl={setAvatarUrl}
-        openCreateModal={openCreateModal} firstName={firstName} lastName={lastName} phone={phone} avatarUrl={avatarUrl} id={id}/>
+    <div className="App">
+      <div className="header">
+        <button onClick={() => openCreateModal ?  setOpenCreateModal(false) : setOpenCreateModal(true)} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">CreateClient</button>
+        <CreateModel setOpenCreateModal={setOpenCreateModal} setFirstName={setFirstName} setLastName={setLastName} setPhone={setPhone} setAvatarUrl={setAvatarUrl}
+          openCreateModal={openCreateModal} firstName={firstName} lastName={lastName} phone={phone} avatarUrl={avatarUrl} id={id}/>
+      </div>
       <div className="flex justify-center mt-8">
         <Table setId={setId} setOpenEditModal={setOpenEditModal} setOpenCreateModal={setOpenCreateModal}/>
         <EditModal setOpenEditModal={setOpenEditModal} setFirstName={setFirstName} setLastName={setLastName} setPhone={setPhone} setAvatarUrl={setAvatarUrl} setId={setId}
@@ -30,6 +33,7 @@ function App() {
     </div>
   );
 }
+
 export default App;
 
 
