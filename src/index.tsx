@@ -1,20 +1,17 @@
-import React, { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
+import { QueryClient, QueryClientProvider} from 'react-query'
+import './index.css';
 import { ReactQueryDevtools } from "react-query/devtools";
 
  const queryClient = new QueryClient()
 
 ReactDOM.render(
-  <StrictMode>
-  <QueryClientProvider client={queryClient}>
-      <App />
-     <ReactQueryDevtools initialIsOpen />
-  </QueryClientProvider>
-  </StrictMode>,
+    <QueryClientProvider client={queryClient}>
+        <App />
+      <ReactQueryDevtools initialIsOpen />
+    </QueryClientProvider>,
   document.getElementById('root')
 );
 
