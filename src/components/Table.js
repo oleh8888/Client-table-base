@@ -47,7 +47,7 @@ const OpenEditFormModal = (e) => {
                 </tr>
               </thead>
               {data.getClients.map((client,idx) =>(
-              <tbody className="bg-white divide-y divide-gray-200">
+              <tbody key={client.id} className="bg-white divide-y divide-gray-200" >
                 <tr key={client.id}>
                   <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">{client.firstName}</td>
                   <td className="px-6 py-4 whitespace-no-wrap text-sm leading-5 font-medium text-gray-900">{client.lastName}</td>
