@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/github.io/Client-table-base/static/css/main.ec6e8e63.chunk.css",
+    "main.js": "/github.io/Client-table-base/static/js/main.433fd49e.chunk.js",
+    "main.js.map": "/github.io/Client-table-base/static/js/main.433fd49e.chunk.js.map",
+    "runtime-main.js": "/github.io/Client-table-base/static/js/runtime-main.ad424221.js",
+    "runtime-main.js.map": "/github.io/Client-table-base/static/js/runtime-main.ad424221.js.map",
+    "static/js/2.23bab1e2.chunk.js": "/github.io/Client-table-base/static/js/2.23bab1e2.chunk.js",
+    "static/js/2.23bab1e2.chunk.js.map": "/github.io/Client-table-base/static/js/2.23bab1e2.chunk.js.map",
+    "index.html": "/github.io/Client-table-base/index.html",
+    "static/css/main.ec6e8e63.chunk.css.map": "/github.io/Client-table-base/static/css/main.ec6e8e63.chunk.css.map",
+    "static/js/2.23bab1e2.chunk.js.LICENSE.txt": "/github.io/Client-table-base/static/js/2.23bab1e2.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ad424221.js",
+    "static/js/2.23bab1e2.chunk.js",
+    "static/css/main.ec6e8e63.chunk.css",
+    "static/js/main.433fd49e.chunk.js"
+  ]
+}
