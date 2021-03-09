@@ -1,20 +1,20 @@
 {
   "files": {
     "main.css": "/github.io/Client-table-base/static/css/main.ec6e8e63.chunk.css",
-    "main.js": "/github.io/Client-table-base/static/js/main.10c65001.chunk.js",
-    "main.js.map": "/github.io/Client-table-base/static/js/main.10c65001.chunk.js.map",
-    "runtime-main.js": "/github.io/Client-table-base/static/js/runtime-main.13aa3632.js",
-    "runtime-main.js.map": "/github.io/Client-table-base/static/js/runtime-main.13aa3632.js.map",
-    "static/js/2.11582189.chunk.js": "/github.io/Client-table-base/static/js/2.11582189.chunk.js",
-    "static/js/2.11582189.chunk.js.map": "/github.io/Client-table-base/static/js/2.11582189.chunk.js.map",
+    "main.js": "/github.io/Client-table-base/static/js/main.98447af3.chunk.js",
+    "main.js.map": "/github.io/Client-table-base/static/js/main.98447af3.chunk.js.map",
+    "runtime-main.js": "/github.io/Client-table-base/static/js/runtime-main.340acd14.js",
+    "runtime-main.js.map": "/github.io/Client-table-base/static/js/runtime-main.340acd14.js.map",
+    "static/js/2.e425d3ad.chunk.js": "/github.io/Client-table-base/static/js/2.e425d3ad.chunk.js",
+    "static/js/2.e425d3ad.chunk.js.map": "/github.io/Client-table-base/static/js/2.e425d3ad.chunk.js.map",
     "index.html": "/github.io/Client-table-base/index.html",
     "static/css/main.ec6e8e63.chunk.css.map": "/github.io/Client-table-base/static/css/main.ec6e8e63.chunk.css.map",
-    "static/js/2.11582189.chunk.js.LICENSE.txt": "/github.io/Client-table-base/static/js/2.11582189.chunk.js.LICENSE.txt"
+    "static/js/2.e425d3ad.chunk.js.LICENSE.txt": "/github.io/Client-table-base/static/js/2.e425d3ad.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.13aa3632.js",
-    "static/js/2.11582189.chunk.js",
+    "static/js/runtime-main.340acd14.js",
+    "static/js/2.e425d3ad.chunk.js",
     "static/css/main.ec6e8e63.chunk.css",
-    "static/js/main.10c65001.chunk.js"
+    "static/js/main.98447af3.chunk.js"
   ]
 }
