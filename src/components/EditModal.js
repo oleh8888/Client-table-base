@@ -1,8 +1,8 @@
 import { useForm } from "react-hook-form";
 import {useQueryClient,useMutation}  from "react-query";
-import {gql,request} from "graphql-request";
+import {gql} from "graphql-request";
 
-const endpoint = "https://test-task.expane.pro/api/graphql";
+import { expaneClient } from '../App'
 
 const EditModal = ({
     setOpenEditModal, setFirstName, setLastName, setPhone,setAvatarUrl, setId,
@@ -11,7 +11,7 @@ const EditModal = ({
     const { register, handleSubmit,  errors } = useForm();
 
     const queryClient = useQueryClient()
-    const showHideModal = openEditModal ? "modal display-block" : "modal display-none";
+    const showHideModal = openEditModal ? "edit-modal display-block" : "edit-modal display-none";
     
     const idVarible = {
         id: id,
@@ -21,10 +21,8 @@ const EditModal = ({
         avatarUrl: avatarUrl
       }
       
-
-      
     const updateClients = async () => {
-        const response = await request(endpoint,gql`
+        const response = await expaneClient.request(gql`
         mutation updateClient($id: ID! $firstName: String!, $lastName: String!,$phone: String, $avatarUrl: String){
           updateClient(id:$id,  firstName: $firstName, lastName: $lastName, phone: $phone, avatarUrl: $avatarUrl){
             id
@@ -45,12 +43,11 @@ const EditModal = ({
       setOpenEditModal(false)
       updateClientMutuation.mutate(data, {
         onSuccess: () => {
-         setId('')
-         setFirstName('')
-         setLastName('');
-         setPhone('')
-        }
-      })
+          setId('')
+          setFirstName('')
+          setLastName('');
+          setPhone('')
+        }})
      }
 
      const required = "This field is required";
@@ -63,9 +60,9 @@ const EditModal = ({
 
     return (
     <>
-        {openEditModal && (
+      {openEditModal && (
         <div className={showHideModal}>
-            <div className="modal-main">
+            <div className="modal-fixed">
                 <form onSubmit={handleSubmit(handleUpdateClient)}>
                   <input type="text"   placeholder="firstname" name="firstname" value={firstName} ref={register({ required: true, maxLength: 18, minLength: 2})} onChange={(e) => setFirstName(e.target.value)}/>
                     {errors.firstname && errors.firstname.type === "required" && errorMessage(required)}
@@ -83,10 +80,9 @@ const EditModal = ({
                 </form>
             </div>
         </div>
-        )}
+      )}
     </>
     );
 }
-
 
 export default EditModal

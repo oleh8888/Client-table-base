@@ -1,9 +1,14 @@
-.App {
+
+
+.header {
+ 
+}
+
+.create-modal{
   text-align: center;
 }
 
-
-.modal {
+.edit-modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -12,7 +17,7 @@
   background: rgba(0, 0, 0, 0.6);
 }
 
-.modal-main {
+.modal-fixed {
   display: flex;
   flex-direction: column;
   justify-content: center;
